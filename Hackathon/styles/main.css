@@ -58,6 +58,7 @@ body, html {
 .img {
     background-image: url(../styles/images/ninja-home.png);
     background-repeat: no-repeat;
+    background-size: 320px 300px;
     text-align: center;
     width: 320px;
     height: 300px;
@@ -67,8 +68,9 @@ body, html {
 .logo {
     background-image: url(../styles/images/logo.png);
     background-repeat: no-repeat;
-    width: 319px;
-    height: 60px;
+    background-size: 273px 80px;
+    width: 273px;
+    height: 80px;
     margin: 40px auto;
 }
 
