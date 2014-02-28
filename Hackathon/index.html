@@ -13,28 +13,12 @@
 
     <script src="scripts/login.js"></script>
     <script src="scripts/location.js"></script>
-    <script src="scripts/weather.js"></script>
+    <!--<script src="scripts/weather.js"></script>-->
     <script src="scripts/app.js"></script>
     <script src="scripts/listing.js"></script>
 
 </head>
 <body>
-    <!--Home-->
-    <div id="tabstrip-home"
-        data-role="view"
-        data-title="Home">
-
-        <div class="view-content">
-            <h1>Welcome!</h1>
-            <!--<a id="skin-change" data-role="button" data-click="app.changeSkin">Flat</a>-->
-            <p>
-                This app is meant to show you all available real estate listings in your area 
-                along with some secret ninja listings you may not know were available!
-            </p>
-            <div class="img"></div>
-        </div>
-    </div>
-
     <!--Login-->
     <div id="tabstrip-login"
         data-role="view"
@@ -73,6 +57,21 @@
         </div>
 
     </div>
+    
+    <!--Home-->
+    <div id="tabstrip-home"
+        data-role="view">
+
+        <div class="view-content">
+            <div class="img"></div>
+            <h1>Welcome!</h1>
+            <!--<a id="skin-change" data-role="button" data-click="app.changeSkin">Flat</a>-->
+            <p>
+                This app is meant to show you all available real estate listings in your area 
+                along with some secret ninja listings you may not have known were available!
+            </p>
+        </div>
+    </div>
 
     <!--Location-->
     <div id="tabstrip-location"
@@ -98,14 +97,13 @@
 
     </div>
 
-    <!--Weather-->
-    <div id="tabstrip-weather"
+    <!--Listings-->
+    <div id="tabstrip-listing"
         data-role="view"
-        data-title="Weather"
-        data-model="app.weatherService.viewModel">
+        data-title="Listings">
 
         <div class="weather">
-            <p class="weather-title">20-Day Forecast</p>
+            <p class="weather-title">Active Listings</p>
 
             <div class="separator">
                 <div class="dark"></div>
@@ -114,13 +112,18 @@
 
             <ul class="forecast-list"
                 data-role="listview"
-                data-bind="source: weatherDataSource"
-                data-template="weather-forecast-template">
+                data-template="listing-template">
             </ul>
+            <ul id="listing"></ul>
         </div>
     </div>
+    
+    <!--Listing template-->
+    <script type="text/x-kendo-tmpl" id="listing-template">
+        
+    </script>
 
-    <!--Weather forecast template-->
+    <!--Weather forecast template
     <script type="text/x-kendo-tmpl" id="weather-forecast-template">
         <div>
             <div class="position-left">
@@ -134,7 +137,7 @@
                 <span class="weather-icon ${image}"></span>
             </div>
         </div>
-    </script>
+    </script>-->
 
     <!--Layout-->
     <div data-role="layout" data-id="tabstrip-layout">
@@ -149,10 +152,10 @@
         <!--Footer-->
         <div data-role="footer">
             <div data-role="tabstrip">
-                <a href="#tabstrip-home" data-icon="home">Home</a>
                 <a href="#tabstrip-login" data-icon="contacts">Login</a>
+                <a href="#tabstrip-home" data-icon="home">Home</a>
                 <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
+                <a href="#tabstrip-listing" data-icon="bookmarks">Listings</a>
             </div>
         </div>
     </div>
