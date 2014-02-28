@@ -60,6 +60,7 @@
     
     <!--Home-->
     <div id="tabstrip-home"
+         data-title="Home"
         data-role="view">
 
         <div class="view-content">
@@ -110,41 +111,24 @@
                 <div class="light"></div>
             </div>
 
-            <ul class="forecast-list"
-                data-role="listview"
-                data-template="listing-template">
-            </ul>
+            
             <ul id="listing"></ul>
         </div>
     </div>
     
-    <!--Listing template-->
-    <script type="text/x-kendo-tmpl" id="listing-template">
-        
-    </script>
-
-    <!--Weather forecast template
-    <script type="text/x-kendo-tmpl" id="weather-forecast-template">
-        <div>
-            <div class="position-left">
-                <span class="weather-info date">${day}</span>
-            </div>
-            <div class="position-right">
-                <span class="weather-info temperature high">${highTemperature}<sup>&deg;</sup></span>
-                <span class="weather-info temperature low">${lowTemperature}<sup>&deg;</sup></span>
-            </div>
-            <div class="position-center">
-                <span class="weather-icon ${image}"></span>
-            </div>
-        </div>
-    </script>-->
+    <!--Listing - more info-->
+    <div data-role="view" id="secondview" data-transition="slide" data-title="Property Info">
+        <div id="local-image"></div>
+    	<div id="local-view"></div>
+	</div>
 
     <!--Layout-->
     <div data-role="layout" data-id="tabstrip-layout">
 
         <!--Header-->
-        <div data-role="header">
+        <div data-role="header" data-id="mobile-view">
             <div data-role="navbar">
+                <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
                 <span data-role="view-title"></span>
             </div>
         </div>

@@ -13,15 +13,19 @@ body, html {
     margin-right: 15px;
 }
 #listing li {
-	padding: 20px 0 70px 0px;
+	padding: 20px 0 30px 0px;
     border-bottom: 1px solid #ddd;
     list-style:none;
     width: 250px;
+}
+#local-image img {
+    width: 100%;
 }
 /* COMMON STYLES*/
 .view-content h1 {
     color: #42454a;
     font-size: 1.8em;
+    text-align: center;
 }
 
 .view-content h1.welcome {
