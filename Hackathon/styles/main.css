@@ -346,7 +346,7 @@ body, html {
 /* RETINA DISPLAY STYLES*/
 @media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
     .img {
-        background-image: url(../styles/images/appbuilder2x.png);
+        background-image: url(../styles/images/ninja-home2x.png);
         background-repeat: no-repeat;
         background-size: 100%;
     }
