@@ -25,7 +25,7 @@ $.ajax({
         	//console.log(fullAddress);
         	//console.log("http:"+media);
         	$('#listing').append('<li>' + '<img align="left" src="http:'+media+'" />'+fullAddress+
-            '<br /><br /><a class="more-info '+LocationKey+'" href="#secondview">More Info</a></li>');
+            '<br /><br /><a data-transition="slide" class="more-info '+LocationKey+'" href="#secondview">More Info</a></li>');
         }
         $('a.more-info').click(function() {
         	var myClasses = this.classList;
