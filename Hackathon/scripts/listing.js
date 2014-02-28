@@ -34,6 +34,7 @@ function getListing(index) {
                 //console.log("http:"+media);
                 $('#listing').append('<li>' + '<img align="left" src="http:'+media+'" />'+fullAddress+
                 '<br /><br /><a class="more-info '+LocationKey+'" href="#secondview">More Info</a></li>');
+                $( "#listing li:odd" ).css( "background-color", "#ccc" );
             }
             $('a.more-info').click(function() {
                 var myClasses = this.classList;

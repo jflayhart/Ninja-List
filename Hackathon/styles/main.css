@@ -5,18 +5,29 @@ body, html {
 }
 
 /* USER STYLES */
+.km-root .km-pane .km-view .km-loginicon {
+    background-image: url("../styles/images/loginicon.png");
+    background-size:100% 100%;
+}
+.km-custom {
+     -webkit-mask-box-image: url("../styles/images/loginicon.png");
+}
 .km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
 	color: #f37021;
+}
+#listing {
+    padding: 0;
 }
 #listing img {
     width: 50%;
     margin-right: 15px;
 }
 #listing li {
-	padding: 20px 0 30px 0px;
+	/*padding: 20px 0 30px 0px;
     border-bottom: 1px solid #ddd;
+    width: 250px;*/
     list-style:none;
-    width: 250px;
+    overflow: hidden;
 }
 #local-image img {
     width: 100%;
@@ -25,12 +36,16 @@ body, html {
     margin: 0 0 0 8px;
     
 }
+#agent-view {
+    background-color:#ccc;
+    overflow: hidden;
+}
 #agent-view img {
     width:50%;
-    margin:0 10px 0 5px;
+    margin:5px 10px 0 5px;
 }
 #agent-view p {
-    margin:0 0 2px 0;
+    margin:5px 0 2px 0;
     word-wrap: break-word;
 }
 /* COMMON STYLES*/
