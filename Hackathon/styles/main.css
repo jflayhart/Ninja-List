@@ -6,10 +6,11 @@ body, html {
 
 /* USER STYLES */
 .km-root .km-pane .km-view .km-loginicon {
-    background-image: url("../styles/images/loginicon.png");
     background-size:100% 100%;
+    -webkit-background-clip: border-box;
+    background-color: #111;
 }
-.km-custom {
+.km-loginicon {
      -webkit-mask-box-image: url("../styles/images/loginicon.png");
 }
 .km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
