@@ -20,12 +20,12 @@ $.ajax({
         	var city = Location['City'];
         	var state = Location['StateOrProvince'];
         	var postal = Location['PostalCode'];
-        	var fullAddress = streetNumber+' '+streetName+' '+city+' '+state+' '+postal;
+        	var fullAddress = streetNumber+' '+streetName+'\n'+city+', '+state+'\n'+postal;
         	//console.log(listing[i]);
         	//console.log(Location);
         	//console.log(fullAddress);
         	//console.log("http:"+media);
-        	$('#listing').append('<p>' + '<img align="left" src="http:'+media+'" />'+fullAddress+'</p>');
+        	$('#listing').append('<li>' + '<img align="left" src="http:'+media+'" />'+fullAddress+'</li>');
         }
     },
     error: function (xhr, status, error) {
