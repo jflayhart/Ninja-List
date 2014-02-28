@@ -98,7 +98,7 @@
 
     </div>
 
-    <!--Listings-->
+    <!--Active Listings-->
     <div id="tabstrip-listing"
         data-role="view"
         data-title="Listings">
@@ -110,9 +110,20 @@
                 <div class="dark"></div>
                 <div class="light"></div>
             </div>
-
+            
+            <ul data-role="buttongroup" data-index="0" data-select="onSelect">
+            	<li>Residential</li>
+            	<li>Land</li>
+          	</ul>
             
             <ul id="listing"></ul>
+            
+            <script>
+                function onSelect(e) {
+                    var index = this.current().index();
+                    getListing(index);
+                }
+            </script>
         </div>
     </div>
     
@@ -128,7 +139,7 @@
         <!--Header-->
         <div data-role="header" data-id="mobile-view">
             <div data-role="navbar">
-                <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+                <a class="nav-button" data-align="left" data-transition="slide:right" data-role="backbutton">Back</a>
                 <span data-role="view-title"></span>
             </div>
         </div>
@@ -136,10 +147,10 @@
         <!--Footer-->
         <div data-role="footer">
             <div data-role="tabstrip">
-                <a href="#tabstrip-login" data-icon="contacts">Login</a>
-                <a href="#tabstrip-home" data-icon="home">Home</a>
-                <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-listing" data-icon="bookmarks">Listings</a>
+                <a href="#tabstrip-login" data-transition="overlay:up" data-icon="contacts">Login</a>
+                <a href="#tabstrip-home" data-transition="overlay:up" data-icon="home">Home</a>
+                <a href="#tabstrip-location" data-transition="overlay:up" data-icon="search">Location</a>
+                <a href="#tabstrip-listing" data-transition="fade" data-icon="bookmarks">Listings</a>
             </div>
         </div>
     </div>
