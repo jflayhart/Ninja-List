@@ -21,6 +21,17 @@ body, html {
 #local-image img {
     width: 100%;
 }
+#local-view h4 {
+    margin: 0 0 0 8px;
+}
+#agent-view img {
+    width:50%;
+    margin:0 10px 0 5px;
+}
+#agent-view p {
+    margin:0 0 2px 0;
+    word-wrap: break-word;
+}
 /* COMMON STYLES*/
 .view-content h1 {
     color: #42454a;
